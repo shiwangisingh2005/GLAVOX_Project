@@ -171,22 +171,22 @@ List<Map<String, String>> topics = [
   },
   {
     'title': 'Money and lifestyle',
-    'image': 'assets/pexels-git-stephen-gitau-302905-1667849.jpg',
+    'image': 'assets/pexels-pixabay-210600.jpg',
   },
   {
     'title': 'What do you like the most',
-    'image': 'assets/pexels-git-stephen-gitau-302905-1667849.jpg',
+    'image': 'assets/pexels-karolina-grabowska-4467986.jpg',
   },
   {
     'title': 'Mental health',
-    'image': 'assets/pexels-git-stephen-gitau-302905-1667849.jpg',
+    'image': 'assets/meditation-7718089_1280.jpg',
   },
   {
     'title': 'Travel and adventure',
-    'image': 'assets/pexels-git-stephen-gitau-302905-1667849.jpg',
+    'image': 'assets/pexels-ninauhlikova-287240.jpg',
   },
   {
     'title': 'Bgmi and Valorant',
-    'image': 'assets/pexels-git-stephen-gitau-302905-1667849.jpg',
+    'image': 'assets/pikaso_text-to-image_Candid-image-photography-natural-textures-highly-r.png',
   },
 ];

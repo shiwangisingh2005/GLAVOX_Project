@@ -66,6 +66,11 @@ flutter:
     - assets\pexels-git-stephen-gitau-302905-1667849.jpg
     - assets\LOGO_1.png
     - assets\dark_theme.png
+    - assets/pexels-pixabay-210600.jpg
+    - assets/pikaso_text-to-image_Candid-image-photography-natural-textures-highly-r.png
+    - assets/pexels-ninauhlikova-287240.jpg
+    - assets/pexels-karolina-grabowska-4467986.jpg
+    - assets/meditation-7718089_1280.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
