@@ -19,6 +19,34 @@ class _AiPageState extends State<AiPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => HomeScreen()),
+            );
+          },
+        ),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset("assets/LOGO.png", height: 40),
+            IconButton(
+              icon: Icon(Icons.person, color: Colors.black, size: 28),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfileScreen()),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
       body: Stack(
         children: [
           // Background Image
@@ -30,53 +58,6 @@ class _AiPageState extends State<AiPage> {
               ),
             ),
           ),
-
-          // GLAVOX Logo (Top Center)
-          Positioned(
-            top: 40,
-            left: 0,
-            right: 0,
-            child: Center(
-              child: Image.asset(
-                "assets/LOGO.png",
-                height: 50,
-              ),
-            ),
-          ),
-
-          // Back Button → Home Screen
-          Positioned(
-            top: 40,
-            left: 20,
-            child: IconButton(
-              icon: Icon(Icons.arrow_back_ios, color: Colors.black, size: 28),
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
-                );
-              },
-            ),
-          ),
-
-          // Profile Icon → Profile Screen
-          Positioned(
-            top: 40,
-            right: 20,
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ProfileScreen()),
-                );
-              },
-              child: CircleAvatar(
-                radius: 20,
-                backgroundImage: AssetImage("assets/profile_icon.png"),
-              ),
-            ),
-          ),
-
           // Center Content (MetaHuman)
           Align(
             alignment: Alignment.center,
@@ -86,7 +67,6 @@ class _AiPageState extends State<AiPage> {
               fit: BoxFit.contain,
             ),
           ),
-
           // Mic Button at Bottom with Simple Wave Effect
           Positioned(
             bottom: 80,
@@ -98,7 +78,7 @@ class _AiPageState extends State<AiPage> {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    if (isListening) // Simple wave effect
+                    if (isListening)
                       Container(
                         height: 120,
                         width: 120,

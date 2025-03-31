@@ -14,27 +14,39 @@ class LoginPage extends StatelessWidget {
           icon: Icon(Icons.arrow_back),
           onPressed: () {
             Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => SplashScreen()),
-                );
+              context,
+              MaterialPageRoute(builder: (context) => SplashScreen()),
+            );
           },
         ),
       ),
-      body: Column(
+      body: Stack(
         children: [
-          const SizedBox(height: 50),
-          Center(
-            child: Image.asset("assets/LOGO.png", height: 85),
-          ),
-          const SizedBox(height: 30),
-
-          Expanded(
-            child: Stack(
-              children: [
-                Positioned.fill(
-                  child: Image.asset("assets/light_theme.png", fit: BoxFit.cover),
+          // Background Image
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assets/light_theme.png"),
+                fit: BoxFit.cover,
+                colorFilter: ColorFilter.mode(
+                  const Color.fromARGB(255, 245, 243, 243).withOpacity(0.6),
+                  BlendMode.darken,
                 ),
-                Center(
+              ),
+            ),
+          ),
+          
+          // Content
+          Column(
+            children: [
+              const SizedBox(height: 50),
+              Center(
+                child: Image.asset("assets/LOGO.png", height: 85),
+              ),
+              const SizedBox(height: 30),
+
+              Expanded(
+                child: Center(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 30.0),
                     child: Column(
@@ -114,8 +126,8 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ],
       ),
